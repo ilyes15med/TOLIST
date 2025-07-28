@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notification</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+  <!-- Notification -->
+  <div id="notification" class="flex items-center justify-between max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 p-4 animate-slide-in">
+    <div class="flex-1 w-0">
+      <p class="text-sm font-medium text-gray-900">le tesk a ete ajouter </p>
+    </div>
+    <div class="flex flex-shrink-0 space-x-4 ml-4">
+      
+      <button onclick="document.getElementById('notification').remove()" class="text-gray-400 hover:text-gray-500 focus:outline-none">
+        <span class="sr-only">Close</span>
+        <!-- X icon -->
+        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <style>
+    @keyframes slide-in {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-slide-in {
+      animation: slide-in 0.4s ease-out;
+    }
+  </style>
+
+</body>
+</html>
